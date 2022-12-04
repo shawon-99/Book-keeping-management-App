@@ -16,6 +16,7 @@ const AddBook = ({ history }) => {
   const [category, setCategory] = useState('');
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [link, setLink] = useState('');
 
   //Get the user id from store
 
@@ -32,6 +33,7 @@ const AddBook = ({ history }) => {
       title,
       author,
       createdBy: userInfo && userInfo._id,
+      link
     };
     e.preventDefault();
     dispatch(createBook(data));
@@ -108,6 +110,17 @@ const AddBook = ({ history }) => {
                           className='form-control'
                           id='exampleInputPassword1'
                           placeholder='Book title'
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>link</label>
+                        <input
+                          value={link}
+                          onChange={e => setLink(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder='Book link'
                         />
                       </div>
                       <button type='submit' className='btn btn-warning m-auto'>

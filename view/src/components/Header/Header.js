@@ -128,7 +128,7 @@ const Header = () => {
                     <div className='modal-footer'>
                       <a
                         className='mr-5'
-                        href='https://github.com/tweneboah'
+                        href='https://github.com/shawon-99'
                         target='_'>
                         developed by: Shawon
                       </a>
